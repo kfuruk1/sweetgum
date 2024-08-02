@@ -1,4 +1,4 @@
-Date,ppt (mm),tmean (degrees C)
+Date,Precipitation,Temperature
 January,133.59,7.3
 February,129.31,9.3
 March,138.73,13.4
@@ -11,4 +11,3 @@ September,101.86,24.5
 October,122.17,18.2
 November,112.09,12.4
 December,140.45,8.4
-Annual,1429.88,17.9
