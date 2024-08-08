@@ -1,0 +1,48 @@
+install.packages("tidyverse")
+install.packages('emmeans')
+install.packages("ggpubr")
+install.packages("nlme")
+install.packages("multcomp")
+
+library(tidyverse)
+library(emmeans)
+library(ggpubr)
+library(nlme)
+library(multcomp)
+
+# Step 1 get the data loaded
+data <- read.csv("C:/Users/KFurukawa/Downloads/phys_data.csv",
+                 header = T)
+
+# Step 2 preparing the data - this step is possible
+data_ready <- data %>%
+  mutate("period" = as.factor("period"),
+         "loc" = as.factor("loc"),
+         "tree_id" = as.factor("tree_id"),
+         "geno" = as.factor("geno"),
+         "period_loc_tree_id_geno" = paste(period, loc, tree_id, geno, sep = "_"))
+
+# Step 3 - Modeling
+mod <- lme(moisture ~ period * loc, # Model specification - fixed factors
+           random = ~ 1|period_loc_tree_id_geno, # Model specification - random factors. The variable random_term(period_loc_id_geno) is a unique ID 
+           correlation = corAR1(form = ~ 1|period_loc_tree_id_geno), # Model specification - Covariance structure
+           data = data_ready, # Data
+           method = "REML") # Method used to estimate variance components. In this case Restricted maximum likelihood (REML)
+
+#3.2 from chatgpt
+mod <- lme(fixed = moisture ~ period * loc, # Model specification - fixed factors
+           random = ~ 1 | period_loc_tree_id_geno, # Random effects specification
+           correlation = corAR1(form = ~ period | period_loc_tree_id_geno), # Correlation structure
+           data = data_ready, # Data
+           method = "REML") # Estimation method
+
+# Step 4 - Getting results
+summary(mod)
+anova(gld_mod)
+
+# Step 5 - post-hoc comparisons
+mod_x1 <- emmeans(mod, ~ period, adjust = "tukey") # If x1 is significant
+cld(gmod_x1, Letters = letters, reversed = T) # post-hoc comparisons and letters
+
+# repeat for each sig. factor and interaction
+
