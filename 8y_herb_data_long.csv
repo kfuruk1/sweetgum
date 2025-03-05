@@ -1,4 +1,4 @@
-year,l.r.t,Study,Loc,Block,Border,Row,Tree,Fam,Geno,Herbicide,Flag,Leaf,Bud2-16,ht_cm,ht_m,ht_ft,gld_mm,gld_cm,dbh_cm,dbh_in,shoots,SCORE-1,SCORE-2,sur,Mglory,WEED-1,WEED-2,WEED%COVER_1,WEED%COVER_2,WEED-T-1,WEED-T-2,coppice
+year,l.r.t,study,loc,block,border,row,tree,fam,geno,herbicide,flag,leaf,bud2-16,ht_cm,ht_m,ht_ft,gld_mm,gld_cm,dbh_cm,dbh_in,shoots,SCORE-1,SCORE-2,sur,Mglory,WEED-1,WEED-2,WEED%COVER_1,WEED%COVER_2,WEED-T-1,WEED-T-2,coppice
 1,10131,2,1,1,1,1,31,AGHS4,2,2,Yellow,,0,74.3,0.743,2.437783,9.13,0.913,,,,2,1,0,0,,31,80,100,,69,non
 1,10132,2,1,1,0,1,32,AGHS4,2,2,Yellow,,0,79.2,0.792,,10.73,1.073,,,,2,2,0,0,,,,,,,non
 1,10133,2,1,1,0,1,33,AGHS4,2,2,Yellow,,0,73.5,0.735,,8.64,0.864,,,,2,2,0,0,,,,,,,non
