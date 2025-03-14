@@ -1,4 +1,4 @@
-0,Year,ID,Study,Location,Block,Border,Row,Tree,Genotype,Herbicide,SCORE-1,Mglory,WEED-1,WEED%COVER_1,WEED-T-1,coppice
+0,Year,ID,Study,Location,Block,Border,Row,Tree,Genotype,Herbicide,Score,Mglory,Weed Height,Weed Cover,Weed Tall,coppice
 1,0,10131,2,1,1,1,1,31,2,2,2,0,,80,,non
 2,0,10132,2,1,1,0,1,32,2,2,2,0,,,,non
 3,0,10133,2,1,1,0,1,33,2,2,2,0,,,,non
